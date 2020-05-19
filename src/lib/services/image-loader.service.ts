@@ -387,6 +387,7 @@ export class ImageLoaderService {
             const fileName = this.createFileName(currentItem.imageUrl);
 
             try {
+                console.log('config',this.config.httpHeaders);
                 const data: Blob = await this.http.get(currentItem.imageUrl, {
                     responseType: 'blob',
                     headers: this.config.httpHeaders,
